@@ -22,6 +22,23 @@ function fillShape(id) {
 }
 
 
+function restart() {
+    gameOver = false;
+    fields = [];
+    document.getElementById('game-over').classList.add('d-none');
+    document.getElementById('restart-btn').classList.add('d-none');
+
+    for (let i = 0; i < 7; i++) {
+        document.getElementById('line-' + i).classList.add('d-none');
+    }
+
+    for (let i = 0; i < 8; i++) {
+        document.getElementById('circle-' + i).classList.add('d-none');
+        document.getElementById('cross-' + i).classList.add('d-none');
+    }
+}
+
+
 function draw() {
     for (let i = 0; i < fields.length; i++) {
         if (fields[i] == 'circle') {
@@ -84,6 +101,7 @@ function checkForWin() {
         
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none');
+            document.getElementById('restart-btn').classList.remove('d-none');
         }, 1000);  
     }
 }
