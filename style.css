@@ -146,6 +146,7 @@ table tr td:last-child {
     width: 50%;
     z-index: 2;
     animation: zoomIn 225ms ease-in-out;
+    object-fit: cover;
 }
 
 @keyframes zoomIn {
@@ -171,8 +172,139 @@ table tr td:last-child {
     cursor: pointer;
     position: absolute;
     bottom: 87px;
+    border-radius: 10px;
 }
 
 .restart-btn:hover {
     background-color: rgb(41, 199, 162);
+}
+
+@media (max-width: 700px) {
+    .game-over {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .player-panel {
+        font-size: 20px;
+    }
+    
+    .player-panel img {
+        height: 40px;
+        width: 40px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shape {
+        width: 50px;
+        height: 50px;
+    }
+
+    .game-over {
+       height: 40%;
+       width: 70%
+    }
+
+    .restart-btn {
+        width: 200px;
+        height: 50px;
+    }
+
+    .horizontal-line {
+        width: 280px;
+    }
+
+    .line-0 {
+        top: 45px;
+        left: 15px;
+    }
+
+    .line-1 {
+        top: 154px;
+        left: 15px;
+    }
+
+    .line-2 {
+        top: 260px;
+        left: 15px;
+    }
+
+    .line-3 {
+        top: 152px;
+        right: 125px;
+    }
+
+    .line-4 {
+        top: 153px;
+        left: 17px;
+    }
+
+    .line-5 {
+        top: 153px;
+        left: 124px;
+    }
+
+    .line-6 {
+        right: 19px;
+        top: 153px;
+    }
+}
+
+@media (max-width: 350px) {
+    td {
+        width: 80px;
+        height: 80px;
+    }
+    .horizontal-line {
+        width: 224px;
+        height: 5px;
+    }
+
+    .line-0 {
+        top: 38px;
+        left: 14px;
+    }
+
+    .line-2 {
+        top: 212px;
+        left: 14px;
+    }
+
+    .line-3 {
+        top: 124px;
+        right: 103px;
+    }
+
+    .line-4 {
+        top: 125px;
+        left: 15px;
+    }
+
+    .line-5 {
+        top: 124px;
+        left: 101px;
+    }
+    
+    .line-6 {
+        right: 18px;
+        top: 125px;
+    }
+
+    .shape {
+        top: 20px;
+        left: 20px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .restart-btn {
+        width: 170px;
+        height: 35px;
+        font-size: 20px;
+    }
 }
