@@ -5,6 +5,7 @@ body {
     height: 100vh;
     flex-direction: column;
     background-color: rgb(179, 243, 222);
+    overflow: hidden;
 }
 
 .player-panel {
@@ -92,16 +93,18 @@ table tr td:last-child {
 }
 
 .make-vertical {
-    transform: rotate(90deg) scaleX(0, 0);
+    transform: rotate(90deg) scaleX(0.0);
+    transition: transform 225ms ease-in-out;
 }
 
 .make-diagonal-two {
-    transform: rotate(45deg) scaleX(0, 0);
+    transform: rotate(45deg) scaleX(0.0);
+    transition: transform 225ms ease-in-out;
     width: 450px;
 }
 
 .make-diagonal {
-    transform: rotate(-45deg) scaleX(0, 0);
+    transition: transform 225ms ease-in-out;
     width: 450px;
 }
 
@@ -138,6 +141,13 @@ table tr td:last-child {
 .line-6 {
     right: 35px;
     top: 202px;
+    transform: rotate(45deg) scaleX(0.0);
+}
+
+.line-7 {
+    top: 200px;
+    left: 30px;
+    transform: rotate(-45deg) scaleX(0.0);
 }
 
 .game-over {
@@ -225,7 +235,7 @@ table tr td:last-child {
     }
 
     .line-1 {
-        top: 154px;
+        top: 153px;
         left: 15px;
     }
 
@@ -253,6 +263,12 @@ table tr td:last-child {
         right: 19px;
         top: 153px;
     }
+
+    .line-7 {
+        top: 154px;
+        left: 15px;
+        transform: rotate(-45deg) scaleX(0.0);
+    }
 }
 
 @media (max-width: 350px) {
@@ -268,6 +284,10 @@ table tr td:last-child {
     .line-0 {
         top: 38px;
         left: 14px;
+    }
+
+    .line-1 {
+        top: 124px;
     }
 
     .line-2 {
@@ -291,8 +311,12 @@ table tr td:last-child {
     }
     
     .line-6 {
-        right: 18px;
-        top: 125px;
+        right: 17px;
+        top: 123px;
+    }
+
+    .line-7 {
+        top: 124px;
     }
 
     .shape {

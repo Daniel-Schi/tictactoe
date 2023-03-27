@@ -111,7 +111,7 @@ function showDiagonalLines(winner) {
 
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
         winner = fields[2];
-        document.getElementById('line-6').style.transform = 'rotate(-45deg) scale(1.4)';
+        document.getElementById('line-7').style.transform = 'rotate(-45deg) scale(1.4)';
     }
     showWinner(winner);
 }
